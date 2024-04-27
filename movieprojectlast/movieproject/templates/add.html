@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+    <input type="text" name="title" placeholder="enter movie title"><br>
+    <input type="text" name="description" placeholder="enter movie description"><br>
+    <input type="date" name="date"><br>
+    <input type="text" name="actors" placeholder="enter movie actors name"><br>
+    <input type="file" name="poster"><br>
+    <div class="wrapper">
+        <select name="category " id="category ">
+            <option value="">category</option>
+            <option value="Horror">Horror</option>
+             <option value="Thriller">Thriller</option>
+             <option value="Action">Action</option>
+             <option value="Romance">Romance</option>
+             <option value="Comedy">Comedy</option>
+            <option value="Animated">Animated</option>
+        </select>
+    </div>
+<!--    <input type="url" name="trailer_link"><br>-->
+
+    <input type="submit">
+
+<!--    <input type="text" name="comment" placeholder="enter movie comment"><br>-->
+<!--    <input type="text" name="rating" placeholder="enter movie rating"><br>-->
+
+
+
+
+
+</form>
+{% endblock %}

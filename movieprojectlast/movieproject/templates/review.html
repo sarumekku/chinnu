@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block body %}
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--{% csrf_token %}-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+<!--<span class="fa fa-star checked"></span>-->
+<!--<span class="fa fa-star checked"></span>-->
+<!--<span class="fa fa-star checked"></span>-->
+<!--<span class="fa fa-star"></span>-->
+<!--<span class="fa fa-star"></span>-->
+
+
+
+
+
+<!--<form action="/action_page.php">-->
+<!--&lt;!&ndash;  <p><label for="w3review">Review of W3Schools:</label></p>&ndash;&gt;-->
+<!--  <textarea id="w3review" name="w3review" rows="4" cols="50">#</textarea>-->
+<!--  <br>-->
+<!--  <input type="submit">-->
+<!--</form>-->
+
+<!--    </form>-->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Item</title>
+</head>
+<body>
+    <h1>Rate {{ review.rating }}</h1>
+    <form method="post" action="{% url 'rate_item' item_id=item.id %}">
+        {% csrf_token %}
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button type="submit">Submit Rating</button>
+    </form>
+</body>
+</html>
+{% endblock %}

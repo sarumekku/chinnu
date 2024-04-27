@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+
+        {% for i in mlist %}
+        <div class="mt-5">
+        <div class="col-md-3">
+            <div class="card" style="width:15rem;">
+  <img class="card-img-top" src="{{i.poster.url}}" alt="..." width="100px" height="250px">
+  <div class="card-body">
+    <h3 class="card-title">{{i.title}}</h3>
+    <p class="card-text">{{i.description}}</p>
+      <p class="card-text">{{i.date}}</p>
+      <p class="card-text">{{i.actors}}</p>
+      <p class="card-text">{{i.category}}</p>
+<!--      <p class="card-text">{{i.comment}}</p>-->
+<!--      <p class="card-text">{{i.rating}}</p>-->
+<!--      <link class="card-link-top" rel="{{i.trailer_link.url}}">-->
+      <a href="{% url 'movieapp:details' i.id %}" class="btn btn-primary">view details</a>
+  </div>
+</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+{% endblock %}
+</div>

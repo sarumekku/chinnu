@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md 6">
+            <img src="{{movie.poster.url}}" width="300" height="400"><br>
+        </div>
+
+<div class="col-md 6">
+    {{ movie.title }}<br>
+    {{ movie.description }}<br>
+    {{ movie.date }}<br>
+    {{ movie.actors }}<br>
+    {{ movie.category }}<br>
+<!--    {{ movie.rating }}<br>-->
+<!--    {{ movie.comment }}<br>-->
+<!--    <div class="container">-->
+<!--    <div class="row">-->
+<!--&lt;!&ndash;        <div class="col-md 6">&ndash;&gt;     <link rel="{{movie.trailer_link.url}}"><br>-->
+<!--        </div>-->
+
+
+
+        <a class='btb btn-warning' href="{% url 'movieapp:update' movie.id %}">update</a><br>
+        <a class='btb btn-danger' href="{% url 'movieapp:delete' movie.id %}">delete</a><br>
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+<!--<span class="fa fa-star checked"></span>-->
+<!--<span class="fa fa-star checked"></span>-->
+<!--<span class="fa fa-star checked"></span>-->
+<!--<span class="fa fa-star"></span>-->
+<!--<span class="fa fa-star"></span>-->
+
+
+
+
+
+<!--<form action="/action_page.php">-->
+<!--&lt;!&ndash;  <p><label for="w3review">Review of W3Schools:</label></p>&ndash;&gt;-->
+<!--  <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>-->
+<!--  <br>-->
+<!--&lt;!&ndash;  <input type="submit">&ndash;&gt;-->
+<!--</form>-->
+
+
+
+
+
+
+
+
+{% endblock %}
+    </div>
+         </div>
+</div>
+        </div>
+</div>
+
